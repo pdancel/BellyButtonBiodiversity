@@ -21,6 +21,12 @@ app = Flask(__name__, static_folder="static")
 # Flask Routes
 #################################################
 
+# Homepage
+@app.route("/")
+def index():
+    
+    return render_template("index.html")
+	
 # Names route
 @app.route("/names")
 def names():
